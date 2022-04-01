@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FilmesAPI.Models;
+
+
 
 
 
@@ -12,11 +15,14 @@ namespace FilmesAPI.Controllers
     [Route("[controller]")]
     
     public class FilmeController : ControllerBase
-    {
-        private static list<Filme> filmes = new List<Filme>();
-        public void AdicionaFilme(Filme filme)
+    {       
+        private static List<Filme> filmes = new List<Filme>(); // criando lista
+
+        [HttpPost]
+        public void AdicionaFilme([FromBody]Filme filme)
         {
-            
+            filmes.Add(filme);
+            Console.WriteLine("filme add");
         }
     }
 }
