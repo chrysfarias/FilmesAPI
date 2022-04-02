@@ -16,13 +16,26 @@ namespace FilmesAPI.Controllers
     
     public class FilmeController : ControllerBase
     {       
-        private static List<Filme> filmes = new List<Filme>(); // criando lista
+        private static List<Filme> filmes = new List<Filme>();
+        public static int id = 1;
+        
 
         [HttpPost]
         public void AdicionaFilme([FromBody]Filme filme)
         {
-            filmes.Add(filme);
             
+            filmes.Add(filme);
+            Filme.ID = id++;
+            
+            
+        }
+
+        [HttpGet]
+        public IEnumerable<Filme> ReduperarFilme()
+        {
+            return filmes;
+
+        
         }
     }
 }
