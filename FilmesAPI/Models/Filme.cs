@@ -7,7 +7,7 @@ namespace FilmesAPI.Models
 {
     public class Filme
     {
-        public static int ID { get;  set; }
+        public int Id { get;  set; }
 
 
         [Range(1, 600, ErrorMessage ="A duração deve possuir um intervalor de 1 a 600 minutos.")]
