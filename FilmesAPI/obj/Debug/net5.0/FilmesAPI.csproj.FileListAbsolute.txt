@@ -12,7 +12,6 @@ C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\FilmesAPI.deps.json
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\FilmesAPI.runtimeconfig.json
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\FilmesAPI.runtimeconfig.dev.json
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\FilmesAPI.dll
-C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\ref\FilmesAPI.dll
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\FilmesAPI.pdb
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -26,3 +25,4 @@ C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\obj\Debug\net5.0\FilmesAPI.dll
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\obj\Debug\net5.0\ref\FilmesAPI.dll
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\obj\Debug\net5.0\FilmesAPI.pdb
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\obj\Debug\net5.0\FilmesAPI.genruntimeconfig.cache
+C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\obj\Debug\net5.0\refint\FilmesAPI.dll

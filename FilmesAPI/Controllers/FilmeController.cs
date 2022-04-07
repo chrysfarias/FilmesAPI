@@ -25,27 +25,24 @@ namespace FilmesAPI.Controllers
         {
             filme.Id = id++;
             filmes.Add(filme);
-
         }
 
         [HttpGet]
-        public IEnumerable<Filme> ReduperaFilme()
+        public IActionResult RecuperaFilme()
         {
-            return filmes;
-
+            return Ok(filmes);
         }
 
         [HttpGet("{id}")]
-        public Filme RecuperaFilmePorId(int id)
+
+        public IActionResult RecuperaFilmePorId(int id)
         {
-            foreach (Filme filme in filmes){
-                if (filme.Id == id)
-                {
-                    return filme;
-                
-                }           
+          Filme filme = filmes.FirstOrDefault(filme => filme.Id == id );
+            if(filme != null)
+            {
+                return Ok(filme);            
             }
-            return null;
+            return NotFound();
         }
     }
 }

@@ -25,7 +25,7 @@ namespace FilmesAPI.Models
         public string Diretor { get; set; }
 
 
-        [StringLength(35,ErrorMessage ="O gênero não deve passar de 35 caracteres.")]
+        [StringLength(35,ErrorMessage = "O gênero não deve passar de 35 caracteres.")]
 
         public string Genero { get; set; }
 
