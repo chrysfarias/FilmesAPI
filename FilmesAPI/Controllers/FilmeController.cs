@@ -20,6 +20,7 @@ namespace FilmesAPI.Controllers
             _context = context;
         }
        
+
         [HttpPost]
         public IActionResult AdicionaFilme([FromBody] Filme filme)
         {
@@ -29,12 +30,13 @@ namespace FilmesAPI.Controllers
         }
 
        
-
         [HttpGet]
+
         public IActionResult RecuperaFilmes()
         {
             return Ok(_context.Filmes);
         }
+
 
         [HttpGet("{id}")]
 
@@ -46,6 +48,38 @@ namespace FilmesAPI.Controllers
                 return Ok(filme);            
             }
             return NotFound();
+        }
+
+
+        [HttpPut("{id}")]
+
+        public IActionResult AtualizaFilme(int id, [FromBody] Filme filmeNovo)
+        {
+            Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id );
+            if (filme == null)
+            {
+                return NotFound();
+            }
+            filme.Titulo= filmeNovo.Titulo;
+            filme.Genero= filmeNovo.Genero;
+            filme.Duracao= filmeNovo.Duracao;
+            filme.Diretor   = filmeNovo.Diretor;
+            _context.SaveChanges();
+            return NoContent();
+        }
+
+        [HttpDelete]
+
+        public IActionResult DeletaFilme(int id)
+        {
+             Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id );
+            if (filme == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(filme);
+            return NoContent();
+        
         }
     }
 }
