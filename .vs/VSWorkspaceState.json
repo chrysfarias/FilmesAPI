@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FilmesAPI",
+    "\\FilmesAPI\\Controllers",
+    "\\FilmesAPI\\Data"
   ],
   "SelectedNode": "\\FilmesAPI.sln",
   "PreviewInSolutionExplorer": false
