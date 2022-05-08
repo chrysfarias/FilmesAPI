@@ -2,7 +2,7 @@
 
 namespace FilmesAPI.Models
 {
-    public class Filme
+    public  class Filme
     {
         [Key]
         [Required]
@@ -27,12 +27,6 @@ namespace FilmesAPI.Models
         [StringLength(35,ErrorMessage = "O gênero não deve passar de 35 caracteres.")]
 
         public string Genero { get; set; }
-
-       
-
-        
-
-
         
     }
 }

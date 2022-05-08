@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FilmesAPI.Models;
 using FilmesAPI.Data;
-
+using FilmesAPI.Data.DTOs;
 
 namespace FilmesAPI.Controllers
 {
@@ -22,8 +22,17 @@ namespace FilmesAPI.Controllers
        
 
         [HttpPost]
-        public IActionResult AdicionaFilme([FromBody] Filme filme)
+        public IActionResult AdicionaFilme([FromBody] CreateFilmeDto filmeDto)
         {
+            Filme filme = new Filme
+            {
+                Diretor = filmeDto.Diretor,
+                Duracao = filmeDto.Duracao,
+                Titulo = filmeDto.Titulo,
+                Genero = filmeDto.Genero     
+            };
+
+
             _context.Filmes.Add(filme);
             _context.SaveChanges();
             return CreatedAtAction(nameof(RecuperaFilmesPorId), new { Id = filme.Id }, filme);
