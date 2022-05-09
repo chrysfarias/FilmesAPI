@@ -54,7 +54,17 @@ namespace FilmesAPI.Controllers
           Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id );
             if(filme != null)
             {
-                return Ok(filme);            
+                ReadFilmeDto filmeDto = new ReadFilmeDto
+                {
+                    Titulo  = filme.Titulo,
+                    Diretor = filme.Diretor,
+                    Duracao = filme.Duracao,
+                    Id = filme.Id,
+                    Genero = filme.Genero,
+                    HoraDaConsulta = DateTime.Now
+                };
+
+                return Ok(filmeDto);            
             }
             return NotFound();
         }
@@ -62,31 +72,34 @@ namespace FilmesAPI.Controllers
 
         [HttpPut("{id}")]
 
-        public IActionResult AtualizaFilme(int id, [FromBody] Filme filmeNovo)
+        public IActionResult AtualizaFilme(int id, [FromBody] UpdateFilmeDto filmeDto)
         {
             Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id );
             if (filme == null)
             {
                 return NotFound();
             }
-            filme.Titulo= filmeNovo.Titulo;
-            filme.Genero= filmeNovo.Genero;
-            filme.Duracao= filmeNovo.Duracao;
-            filme.Diretor   = filmeNovo.Diretor;
+
+            filme.Titulo  = filmeDto.Titulo;
+            filme.Genero  = filmeDto.Genero;
+            filme.Duracao = filmeDto.Duracao;
+            filme.Diretor = filmeDto.Diretor;
+
             _context.SaveChanges();
             return NoContent();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
 
         public IActionResult DeletaFilme(int id)
         {
-             Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id );
+            Filme filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id );
             if (filme == null)
             {
                 return NotFound();
             }
             _context.Remove(filme);
+            _context.SaveChanges();
             return NoContent();
         
         }

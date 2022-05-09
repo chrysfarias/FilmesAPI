@@ -2,9 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\FilmesAPI",
-    "\\FilmesAPI\\Data",
+    "\\FilmesAPI\\Data\\DTOs",
     "\\FilmesAPI\\Models"
   ],
-  "SelectedNode": "\\FilmesAPI\\Models\\Filme.cs",
+  "SelectedNode": "\\FilmesAPI.sln",
   "PreviewInSolutionExplorer": false
 }
