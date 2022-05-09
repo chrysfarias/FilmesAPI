@@ -34,6 +34,8 @@ namespace FilmesAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "FilmesAPI", Version = "v1" });
             });
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

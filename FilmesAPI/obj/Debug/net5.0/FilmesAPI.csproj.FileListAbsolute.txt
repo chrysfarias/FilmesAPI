@@ -45,3 +45,5 @@ C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\System.Configuration
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\chrys\Desktop\FilmesAPI\FilmesAPI\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
